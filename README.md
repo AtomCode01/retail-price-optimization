@@ -22,7 +22,7 @@ The sample dataset includes various details about each order, such as:
 Let's jump into the Python packages you need. Within the Python environment of your choice, run:
 
 ```python
-git clone https://github.com/zenml-io/zenml-projects.git
+git clone https://github.com/AtomCode01/retail-price-optimization.git
 pip install -r requirements.txt
 ```
 

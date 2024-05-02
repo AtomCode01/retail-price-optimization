@@ -9,7 +9,7 @@ from model.data_cleaning import (
 )
 from typing_extensions import Annotated
 
-# from zenml.steps import Output, step
+from zenml.steps import Output, step
 from zenml import step
 
 

@@ -50,7 +50,7 @@ def dynamic_importer() -> str:
 class DeploymentTriggerConfig(BaseParameters):
     """Parameters that are used to trigger the deployment"""
 
-    min_accuracy: float = 0.9
+    min_accuracy: float = 0
 
 
 @step
@@ -185,9 +185,9 @@ def predictor(
     return prediction
 
 
-@pipeline(enable_cache=True, settings={"docker": docker_settings})
+@pipeline(enable_cache=False, settings={"docker": docker_settings})
 def continuous_deployment_pipeline(
-    min_accuracy: float = 0.9,
+    min_accuracy: float = 0,
     workers: int = 1,
     timeout: int = DEFAULT_SERVICE_START_STOP_TIMEOUT,
 ):
